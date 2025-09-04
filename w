@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vapi Widget Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vapi Widget on GitHub Pages</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; padding: 24px; }
+  </style>
 </head>
 <body>
-  
-  <!-- Your normal page content -->
-  <h1>Welcome to My GitHub Pages Site</h1>
-  <p>This is a test page with the Vapi AI call agent widget embedded.</p>
+  <h1>Vapi Widget Test</h1>
+  <p>If everything is wired, a floating button should appear at the bottom-right.</p>
 
-  <!-- Vapi widget -->
+  <!-- Vapi widget element -->
   <vapi-widget
     public-key="780a8376-3102-4337-b75c-545fd57ca19f"
     assistant-id="047bf172-900c-4271-af5c-fa250b5b1342"
@@ -36,8 +37,10 @@
     consent-storage-key="vapi_widget_consent"
   ></vapi-widget>
 
-  <!-- Script loader -->
-  <script src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js" async type="text/javascript"></script>
+  <!-- Preferred: unpkg -->
+  <script src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js" defer type="text/javascript"></script>
 
+  <!-- If unpkg fails, comment the line above and uncomment jsDelivr below -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js" defer type="text/javascript"></script> -->
 </body>
 </html>
